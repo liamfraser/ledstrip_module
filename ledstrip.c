@@ -110,7 +110,7 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     }
 
     // Output R G B values
-    sprintf(msg_buf, "R: %d, G:%d, B:%d\n", colours[0], colours[1], colours[2]);
+    sprintf(msg_buf, "R: %d, G: %d, B: %d\n", colours[0], colours[1], colours[2]);
     msg_len = strlen(msg_buf);
     
     error_count = copy_to_user(buffer, msg_buf, msg_len);
